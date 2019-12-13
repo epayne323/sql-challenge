@@ -5,6 +5,7 @@ DROP TABLE IF EXISTS salaries CASCADE;
 DROP TABLE IF EXISTS titles CASCADE;
 DROP TABLE IF EXISTS dept_manager CASCADE;
 
+--primary table for employees
 CREATE TABLE "employees" (
   "emp_no" VARCHAR NOT NULL PRIMARY KEY,
   "birth_date" DATE NOT NULL,
@@ -14,11 +15,13 @@ CREATE TABLE "employees" (
   "hire_date" DATE NOT NULL
 );
 
+--primary table for departments
 CREATE TABLE "departments" (
   "dept_no" VARCHAR NOT NULL PRIMARY KEY,
   "dept_name" VARCHAR NOT NULL
 );
 
+--junction table with composite primary key linking employees and department tables 
 CREATE TABLE "dept_emp" (
   "emp_no" VARCHAR NOT NULL REFERENCES employees(emp_no),
   "dept_no" VARCHAR NOT NULL REFERENCES departments(dept_no),
