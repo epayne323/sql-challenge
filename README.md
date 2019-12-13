@@ -1,9 +1,3 @@
----
-noteId: "59e867d01d4a11ea8421bf71ed8bf405"
-tags: []
-
----
-
 # sql-challenge
 Creation of tables and queries to analyze employee information using postgres, plus plotting with pandas and matplotlib in jupyter notebook.
 
